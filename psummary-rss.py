@@ -8,7 +8,7 @@ from feedgen.feed import FeedGenerator
 fg = FeedGenerator()
 fg.title('New FAH Beta Projects')
 fg.link( href='http://web.stanford.edu/~cxh/fah-beta.xml', rel='self' )
-fg.author( {'name':'cxh','email':'cxh@stanford.edu'} )
+fg.author( {'name':'server','email':'server@vsp-fah.stanford.edu'} )
 fg.description('A list of the most recent beta Projects on Folding@home')
 fg.id('http://web.stanford.edu/~cxh/fah-beta.xml')
 fg.language('en')
@@ -19,11 +19,11 @@ old = [project['id'] for project in old_projects]
 for project in new_projects:
 	if project['beta'] and project['id'] not in old:
 		fe = fg.add_entry()
-		fe.id('proj' + str(project['id']))
-		fe.title('Project ' + str(project['id']))
+		fe.id('proj%s' % str(project['id']))
+		fe.title('Project %s' % str(project['id']))
 		fe.link({'href': 'http://assign.stanford.edu/api/project/summary'})
 		fe.published(datetime.now(pytz.utc))
-		fe.description(project['contact'] + ' has started project ' + str(project['id']) + ". Tune into channel #" + str(project['id'])[:-2] + "00 for more information.")
+		fe.description('@%s has started project %s. Tune into channel #%s00 for more information.' % (project['contact'], str(project['id']), str(project['id'])[:-2]))
 
 #fg.rss_file('/home/server/announcements/fah-beta.xml')
 print fg.rss_str(pretty=True)
