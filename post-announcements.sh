@@ -1,8 +1,8 @@
+#!/bin/bash
 ################################################################################
 # THIS SCRIPT GENERATES AN RSS FEED WITH THE LATEST BETA PROJECTS ADDED TO FAH
 # THIS SCRIPT IS INTENDED TO NOTIFY INTERNAL USERS OF NEW PROJECTS VIA FAH SLACK
 ################################################################################
-#!/bin/bash
 
 URI=http://assign.stanford.edu/api/project/summary #FAH JSON API
 TMP=/home/server/announcements/psummary.json.tmp #PATH JSON STRING DOWNLOAD (TEMPORARY)
