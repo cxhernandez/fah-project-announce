@@ -25,5 +25,4 @@ for project in new_projects:
 		fe.published(datetime.now(pytz.utc))
 		fe.description('@%s has started project %s. Tune into channel #%s00 for more information.' % (project['contact'], str(project['id']), str(project['id'])[:-2]))
 
-#fg.rss_file('/home/server/announcements/fah-beta.xml')
 print fg.rss_str(pretty=True)
