@@ -9,7 +9,7 @@ fg = FeedGenerator()
 fg.title('New FAH Beta Projects')
 fg.link( href='http://web.stanford.edu/~cxh/fah-beta.xml', rel='self' )
 fg.author( {'name':'cxh','email':'cxh@stanford.edu'} )
-fg.description('A list of the most recent beta Ppojects on Folding@home')
+fg.description('A list of the most recent beta Projects on Folding@home')
 fg.id('http://web.stanford.edu/~cxh/fah-beta.xml')
 fg.language('en')
 
