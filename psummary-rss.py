@@ -14,7 +14,7 @@ fg.id('http://web.stanford.edu/~cxh/fah-beta.xml')
 fg.language('en')
 
 old_projects = json.load(open('/home/server/announcements/psummary.json','rb'))
-new_projects = projects = json.load(open('/home/server/announcements/psummary.json.tmp','rb'))
+new_projects = json.load(open('/home/server/announcements/psummary.json.tmp','rb'))
 old = [project['id'] for project in old_projects] 
 for project in new_projects:
 	if project['beta'] and project['id'] not in old:
