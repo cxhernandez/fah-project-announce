@@ -1,2 +1,2 @@
 # fah-project-announce
-Generates an RSS of newly released beta projects for the Folding@home Slack Team
+Generates an RSS Feed of newly released beta projects for the Folding@home Slack Team
